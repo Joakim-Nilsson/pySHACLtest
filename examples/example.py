@@ -4,7 +4,7 @@ from os import path
 import json
 
 data_ttl_file = \
-    filepath = "C:\\Users\\joanilss\\FK\\instantiated_data.ttl"
+    filepath = "C:\\Users\\joanilss\\FK\\feldata.ttl"
 
 
 data_ttl_file = path.abspath(data_ttl_file) 
