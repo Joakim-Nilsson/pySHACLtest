@@ -10,17 +10,14 @@ data_graph = \
     filepath = "C:\\Users\\joanilss\\FK\\instantiated_data.ttl"
 
 shacl_file = path.abspath(shacl_file)
-data_graph = path.abspath(data_graph) 
+data_graph = path.abspath(data_graph)
 
 # Run the validation
 conforms, v_graph, v_text = validate(data_graph, shacl_graph=shacl_file, ont_graph=None, inference='none', abort_on_error=False, meta_shacl=False, debug=False, js=False, advanced=False)
 
-#conforms, v_graph, v_text = validate(data_ttl_file, shacl_graph=None, inference='rdfs',
-                                    # serialize_report_graph=True)
-
 result_json = json.dumps({
     "conforms": conforms,
-    "validation_graph":v_graph.decode('utf-8'),
+    "validation_graph":v_graph,
     "validation_text": v_text
 }, indent=4)
 
@@ -31,7 +28,6 @@ else:
 
 print(json.dumps(result_json, indent=4))
 print(result_json)
-
 
 print(conforms)
 print(v_graph)
