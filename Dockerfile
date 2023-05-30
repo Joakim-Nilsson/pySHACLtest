@@ -20,4 +20,4 @@ USER root
 RUN apk del build-dependencies
 USER pyshacl
 ENTRYPOINT ["/sbin/tini-static", "--"]
-CMD ["poetry", "run", "pyshacl"]
+CMD ["poetry", "run", "pyshacl","--server"]

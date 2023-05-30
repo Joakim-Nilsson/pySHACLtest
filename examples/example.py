@@ -7,7 +7,7 @@ shacl_file = \
     filepath = "path/to/your/shape/file.ttl"
 
 data_graph = \
-    filepath = "C:\\Users\\joanilss\\FK\\instantiated_data.ttl"
+    filepath = "path/to/your/graph/file.ttl"
 
 shacl_file = path.abspath(shacl_file)
 data_graph = path.abspath(data_graph)
